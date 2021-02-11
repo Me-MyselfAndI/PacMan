@@ -1,0 +1,43 @@
+Pacman Game:
+  - Class for Map
+    - Initializer
+    - Image
+    - List for items (dots + food)
+    - Score
+    - function that checks whether all dots are gone and if so, ends the game
+
+  - Class for an Item
+    - initalzer
+    - image
+    - position
+    - category
+
+  - Class for Creature
+    - position
+    - image
+    - move function that ONLY changes position
+    - variable that stores the map
+
+  - Class for Pacman that inherits Creature
+    - lives variable
+    - Pacman_got_angry boolean variable
+    - collect function
+      - either increase score if collected food
+      - or if fruit, enable superpower
+    - move () function
+      - trigger super.move () in the direction of arrows
+    - met_ghost () function
+      - either Ghost.die ()
+      - or Pacman.die ()     DEPENDING ON pacman_got_angry value
+    - die function
+      - Cause Game over screen
+
+  - Class for Ghosts that inherits Creature
+    - move function
+      - trigger super.move () in the direction of pacman
+    - respawn () function
+      - ghost's position resets to the home
+    - move () function
+      - checks for player's actions and then calls super.move
+
+  - * (Sound) Functions 
