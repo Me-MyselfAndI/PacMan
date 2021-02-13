@@ -1,3 +1,5 @@
+import time
+
 import play
 from pacman import Pacman
 from game_map import Game_map
@@ -74,10 +76,10 @@ fruit.append(Item("images/Fruit.png", [-257 + 29 * 28.542, -257 + 0 * 28.542], "
 fruit.append(Item("images/Fruit.png", [-257 + 0 * 28.542, -257 + 0 * 28.542], "fruit"))
 
 ghost_sprites = [
-    play.new_box(color="red", width=7, height=7, x=-257, y=-273),
-    play.new_box(color="pink", width=7, height=7, x=-257, y=273),
-    play.new_box(color="cyan", width=7, height=7, x=252, y=-273),
-    play.new_box(color="orange", width=7, height=7, x=252, y=273)
+    play.new_box(color="red", width=7, height=7, x=-257, y=-273, transparency=1),
+    play.new_box(color="pink", width=7, height=7, x=-257, y=273, transparency=1),
+    play.new_box(color="cyan", width=7, height=7, x=252, y=-273, transparency=1),
+    play.new_box(color="orange", width=7, height=7, x=252, y=273, transparency=1)
 ]
 
 pacman = Pacman("images/pacman.png", [-257 + 0 * 28.542, -257 + 0 * 28.542], game_map, 5)
@@ -92,86 +94,131 @@ targets = []
 for i in range(len(ghosts)):
     targets.append(pacman.image)
 
+game_continues = True
 
 @play.when_key_pressed('up', 'w')
 async def move_up(key):
-    pacman.move_up()
-    pacman.is_touching_dots()
-    await play.timer(seconds=0.001)
+    global game_continues
+    if (game_continues):
+        pacman.move_up()
+        pacman.is_touching_dots()
+        await play.timer(seconds=0.001)
 
 
 @play.when_key_pressed('down', 's')
 async def move_down(key):
-    pacman.move_down()
-    pacman.is_touching_dots()
-    await play.timer(seconds=0.001)
+    global game_continues
+    if (game_continues):
+        pacman.move_down()
+        pacman.is_touching_dots()
+        await play.timer(seconds=0.001)
 
 
 @play.when_key_pressed('right', 'd')
 async def move_right(key):
-    pacman.move_right()
-    pacman.is_touching_dots()
-    await play.timer(seconds=0.001)
+    global game_continues
+    if (game_continues):
+        pacman.move_right()
+        pacman.is_touching_dots()
+        await play.timer(seconds=0.001)
 
 
 @play.when_key_pressed('left', 'a')
 async def move_left(key):
-    pacman.move_left()
-    pacman.is_touching_dots()
-    await play.timer(seconds=0.001)
+    global game_continues
+    if (game_continues):
+        pacman.move_left()
+        pacman.is_touching_dots()
+        await play.timer(seconds=0.001)
 
-
-# GET EACH GHOST TO GO TO THEIR COLOR MATCHED BOX. LOOK AT BLINKY FOR EXAMPLE. ALSO, MAKE SURE TO DELETE ALL EXCESS DOTS (LOOK AT LINE 66).
 
 
 @play.repeat_forever
 async def move_blinky():
-    if ghosts[0].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
-        ghosts[0].move(None, True)
-    ghosts[0].move(targets[0])
-    await play.timer(seconds=0.001)
-    if ghosts[0].image.is_touching(pacman.image):
-        game_map.game_over(pacman, ghosts)
+    global game_continues
+    if (game_continues):
+        try:
+            if ghosts[0].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
+                ghosts[0].move(None, True)
+            ghosts[0].move(targets[0])
+            await play.timer(seconds=0.001)
+            if ghosts[0].image.is_touching(pacman.image):
+                game_continues = False
+                game_map.game_over(pacman, ghosts)
+        except ValueError:
+            time.sleep(10)
+        except IndexError:
+            time.sleep(10)
 
 
 @play.repeat_forever
 async def move_pinky():
-    if ghosts[1].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
-        ghosts[1].move(None, True)
-    ghosts[1].move(targets[1])
-    await play.timer(seconds=0.001)
-    if ghosts[1].image.is_touching(pacman.image):
-        game_map.game_over(pacman, ghosts)
+    global game_continues
+    if (game_continues):
+        try:
+            if ghosts[1].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
+                ghosts[1].move(None, True)
+            ghosts[1].move(targets[1])
+            await play.timer(seconds=0.001)
+            if ghosts[1].image.is_touching(pacman.image):
+                game_continues = False
+                game_map.game_over(pacman, ghosts)
+        except ValueError:
+            time.sleep(10)
+        except IndexError:
+            time.sleep(10)
 
 
 @play.repeat_forever
 async def move_inky():
-    if ghosts[2].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
-        ghosts[2].move(None, True)
-    ghosts[2].move(targets[2])
-    await play.timer(seconds=0.001)
-    if ghosts[2].image.is_touching(pacman.image):
-        game_map.game_over(pacman, ghosts)
+    global game_continues
+    if (game_continues):
+        try:
+            if ghosts[2].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
+                ghosts[2].move(None, True)
+            ghosts[2].move(targets[2])
+            await play.timer(seconds=0.001)
+            if ghosts[2].image.is_touching(pacman.image):
+                game_continues = False
+                game_map.game_over(pacman, ghosts)
+        except ValueError:
+            time.sleep(10)
+        except IndexError:
+            time.sleep(10)
 
 
 @play.repeat_forever
 async def move_clyde():
-    if ghosts[3].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
-        ghosts[3].move(None, True)
-    ghosts[3].move(targets[3])
-    await play.timer(seconds=0.001)
-    if ghosts[3].image.is_touching(pacman.image):
-        game_map.game_over(pacman, ghosts)
+    global game_continues
+    if (game_continues):
+        try:
+            if ghosts[3].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
+                ghosts[3].move(None, True)
+            ghosts[3].move(targets[3])
+            await play.timer(seconds=0.001)
+            if ghosts[3].image.is_touching(pacman.image):
+                game_continues = False
+                game_map.game_over(pacman, ghosts)
+        except ValueError:
+            time.sleep(10)
+        except IndexError:
+            time.sleep(10)
 
 
 @play.when_program_starts
 async def change_goals():
-    for tact in range (10):
-        for i in range (len (ghosts)):
-            ghosts[i].move(None, True)
+    global game_continues
+    if (game_continues):
+        for tact in range (10):
+            for i in range (len (ghosts)):
+                ghosts[i].move(None, True)
 
     tact = 0
     while True:
+        if not game_continues:
+            for i in range(len(ghosts)):
+                ghosts[i] = Ghost(None, 0, 0, game_map, size=0)
+                break
         if len(dots) == 0:
             game_map.game_won(pacman, ghosts)
         if tact % 200 == 0:

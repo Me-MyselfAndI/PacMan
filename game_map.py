@@ -1,4 +1,4 @@
-import play
+import play, time
 
 
 class Game_map:
@@ -25,14 +25,20 @@ class Game_map:
             ghosts[i].remove()
             del ghosts[i]
         pacman.remove()
+        time.sleep(6)
+        quit()
 
 
 
     def game_won(self, pacman, ghosts):
+        you_won = play.new_image(image='images/Text/YouWon.png', x=0, y=0, size=100)
+        you_won.move(1)
         self.delete_field(pacman, ghosts)
         print("You Won")
 
     def game_over(self, pacman, ghosts):
+        game_over = play.new_image(image='images/Text/GameOver.png', x=0, y=0, size=100)
+        game_over.move(1)
         self.delete_field(pacman, ghosts)
         print("Game Over")
 
