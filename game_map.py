@@ -10,16 +10,22 @@ class Game_map:
         self.full_image.transparency = 0
         self.walls = walls
         self.dots = dots
+        self.you_won_sprite = play.new_image(image='images/text/YouWon.png', x=0, y=0, size=100)
+        self.you_won_sprite.hide()
+        self.game_over_sprite = play.new_image(image='images/text/GameOver.png', x=0, y=0, size=100)
+        self.game_over_sprite.hide()
+
 
     def delete_field(self, pacman, ghosts):
+        time.sleep(2)
         for i in range(len(self.dots)-1, -1, -1):
-            self.dots[i].image.remove()
+            self.dots[i].image.hide()
             del self.dots[i]
         for i in range(len(self.fruit)-1, -1, -1):
-            self.fruit[i].image.remove()
+            self.fruit[i].image.hide()
             del self.fruit[i]
         for i in range(len(self.walls)-1, -1, -1):
-            self.walls[i].remove()
+            self.walls[i].hide()
             del self.walls[i]
         for i in range(len(ghosts)-1, -1, -1):
             ghosts[i].remove()
@@ -31,14 +37,14 @@ class Game_map:
 
 
     def game_won(self, pacman, ghosts):
-        you_won = play.new_image(image='images/Text/YouWon.png', x=0, y=0, size=100)
-        you_won.move(1)
+        self.you_won_sprite.show()
+        time.sleep(1)
         self.delete_field(pacman, ghosts)
         print("You Won")
 
     def game_over(self, pacman, ghosts):
-        game_over = play.new_image(image='images/Text/GameOver.png', x=0, y=0, size=100)
-        game_over.move(1)
+        self.game_over_sprite.show()
+        time.sleep(1)
         self.delete_field(pacman, ghosts)
         print("Game Over")
 

@@ -13,50 +13,52 @@ fruit = []
 map_sprites = []
 play.set_backdrop((0, 0, 0))
 # complete_map = play.new_image(image="images/map/Map.png", x=0, y=0, size=50)
-map_sprites.append(play.new_image(image="images/map/Map2.jpg", x=-118, y=231, size=32))
-map_sprites.append(play.new_image(image="images/map/Map1.jpg", x=-220, y=231, size=32))
-map_sprites.append(play.new_image(image="images/map/Map2.jpg", x=118, y=231, size=32))
-map_sprites.append(play.new_image(image="images/map/Map1.jpg", x=220, y=231, size=32))
-map_sprites.append(play.new_image(image="images/map/Map3.jpg", x=-220, y=168, size=32))
-map_sprites.append(play.new_image(image="images/map/Map3.jpg", x=220, y=168, size=32))
-map_sprites.append(play.new_image(image="images/map/Map5.jpg", x=-283, y=210, size=34))
-map_sprites.append(play.new_image(image="images/map/Map5.jpg", x=-283, y=190, size=34))
-map_sprites.append(play.new_image(image="images/map/Map4.jpg", x=-242, y=90, size=34))
-map_sprites.append(play.new_image(image="images/map/Map6.jpg", x=-1, y=285, size=36))
-map_sprites.append(play.new_image(image="images/map/Map7.jpg", x=-1, y=247, size=32))
-map_sprites.append(play.new_image(image="images/map/Map5.jpg", x=284, y=210, size=34))
-map_sprites.append(play.new_image(image="images/map/Map5.jpg", x=284, y=190, size=34))
-map_sprites.append(play.new_image(image="images/map/Map8.jpg", x=241, y=90, size=34))
-map_sprites.append(play.new_image(image="images/map/Map9.jpg", x=-245, y=-49, size=32))
-map_sprites.append(play.new_image(image="images/map/Map25.jpg", x=245, y=-51, size=32))
-map_sprites.append(play.new_image(image="images/map/Map11.jpg", x=0, y=-285, size=36))
-map_sprites.append(play.new_image(image="images/map/Map10.jpg", x=-284, y=-182, size=36))
-map_sprites.append(play.new_image(image="images/map/Map12.jpg", x=284, y=-182, size=36))
-map_sprites.append(play.new_image(image="images/map/Map13.jpg", x=-264, y=-187, size=32))
-map_sprites.append(play.new_image(image="images/map/Map14.jpg", x=264, y=-184, size=32))
-map_sprites.append(play.new_image(image="images/map/Map15.jpg", x=-128, y=-51, size=32))
-map_sprites.append(play.new_image(image="images/map/Map15.jpg", x=128, y=-51, size=32))
-map_sprites.append(play.new_image(image="images/map/Map16.jpg", x=0, y=170, size=32))
-map_sprites.append(play.new_image(image="images/map/Map16.jpg", x=0, y=-182, size=32))
-map_sprites.append(play.new_image(image="images/map/Map16.jpg", x=0, y=-68, size=32))
-map_sprites.append(play.new_image(image="images/map/Map17.jpg", x=0, y=128, size=32))
-map_sprites.append(play.new_image(image="images/map/Map17.jpg", x=0, y=-226, size=32))
-map_sprites.append(play.new_image(image="images/map/Map17.jpg", x=0, y=-112, size=32))
-map_sprites.append(play.new_image(image="images/map/Map18.jpg", x=-128, y=110, size=32))
-map_sprites.append(play.new_image(image="images/map/Map19.jpg", x=-84, y=111, size=32))
-map_sprites.append(play.new_image(image="images/map/Map21.jpg", x=128, y=111, size=32))
-map_sprites.append(play.new_image(image="images/map/Map20.jpg", x=84, y=110, size=32))
-map_sprites.append(play.new_image(image="images/map/Map22.jpg", x=0, y=20, size=16))
-map_sprites.append(play.new_image(image="images/map/Map23.jpg", x=-150, y=-249, size=32))
-map_sprites.append(play.new_image(image="images/map/Map24.jpg", x=-127, y=-203, size=32))
-map_sprites.append(play.new_image(image="images/map/Map26.jpg", x=150, y=-249, size=32))
-map_sprites.append(play.new_image(image="images/map/Map24.jpg", x=127, y=-203, size=32))
-map_sprites.append(play.new_image(image="images/map/Map27.jpg", x=-209, y=-135, size=32))
-map_sprites.append(play.new_image(image="images/map/Map28.jpg", x=-194, y=-172, size=32))
-map_sprites.append(play.new_image(image="images/map/Map28.jpg", x=194, y=-172, size=32))
-map_sprites.append(play.new_image(image="images/map/Map29.jpg", x=209, y=-135, size=32))
-map_sprites.append(play.new_image(image="images/map/Map3.jpg", x=-118, y=-134, size=32))
-map_sprites.append(play.new_image(image="images/map/Map3.jpg", x=118, y=-134, size=32))
+map_sprites.append(play.new_image(image="new_images/map1.jpg", x=-200, y=235, size=40))
+map_sprites.append(play.new_image(image="new_images/map1.jpg", x= 200, y=235, size=40))
+map_sprites.append(play.new_image(image="new_images/map2.jpg", x= -90, y=236, size=40))
+map_sprites.append(play.new_image(image="new_images/map2.jpg", x=  90, y=236, size=40))
+map_sprites.append(play.new_image(image="new_images/map3.jpg", x=   0, y=250, size=40))
+map_sprites.append(play.new_image(image="new_images/map4.jpg", x=   0, y=295, size=40))
+map_sprites.append(play.new_image(image="new_images/map6.jpg", x= 222, y=77, size=40))
+map_sprites.append(play.new_image(image="new_images/map5.jpg", x= 267, y=206, size=40))
+map_sprites.append(play.new_image(image="new_images/map32.jpg", x=-265, y=208, size=40))
+map_sprites.append(play.new_image(image="new_images/map7.jpg", x= 200, y=166, size=40))
+map_sprites.append(play.new_image(image="new_images/map7.jpg", x=-200, y=166, size=40))
+map_sprites.append(play.new_image(image="new_images/map8.jpg", x=-119, y=108, size=40))
+map_sprites.append(play.new_image(image="new_images/map9.jpg", x=-79, y=108, size=40))
+map_sprites.append(play.new_image(image="new_images/map12.jpg", x= 120, y=108, size=40))
+map_sprites.append(play.new_image(image="new_images/map13.jpg", x= 79, y=108, size=40))
+map_sprites.append(play.new_image(image="new_images/map10.jpg", x= 0, y=167, size=40))
+map_sprites.append(play.new_image(image="new_images/map11.jpg", x= 0, y=125, size=40))
+map_sprites.append(play.new_image(image="new_images/map14.jpg", x= 0, y=18, size=40))
+map_sprites.append(play.new_image(image="new_images/map21.jpg", x= -265, y=-195, size=40))
+map_sprites.append(play.new_image(image="new_images/map22.jpg", x= 270, y=-192, size=40))
+map_sprites.append(play.new_image(image="new_images/map15.jpg", x=-119, y=-42, size=40))
+map_sprites.append(play.new_image(image="new_images/map15.jpg", x= 119, y=-42, size=40))
+map_sprites.append(play.new_image(image="new_images/map18.jpg", x=-222, y=-42, size=40))
+map_sprites.append(play.new_image(image="new_images/map16.jpg", x=-222, y= 77, size=40))
+map_sprites.append(play.new_image(image="new_images/map16.jpg", x=-222, y= 77, size=40))
+map_sprites.append(play.new_image(image="new_images/map20.jpg", x= 222, y=-42, size=40))
+map_sprites.append(play.new_image(image="new_images/map23.jpg", x= -245, y=-191, size=40))
+map_sprites.append(play.new_image(image="new_images/map24.jpg", x= 248, y=-191, size=40))
+map_sprites.append(play.new_image(image="new_images/map24.jpg", x= 248, y=-191, size=40))
+map_sprites.append(play.new_image(image="new_images/map19.jpg", x= 1, y=-295, size=40))
+map_sprites.append(play.new_image(image="new_images/map10.jpg", x= 0, y=-74, size=40))
+map_sprites.append(play.new_image(image="new_images/map11.jpg", x= 0, y=-114, size=40))
+map_sprites.append(play.new_image(image="new_images/map10.jpg", x= 0, y=-191, size=40))
+map_sprites.append(play.new_image(image="new_images/map11.jpg", x= 0, y=-232, size=40))
+map_sprites.append(play.new_image(image="new_images/map10.jpg", x= 0, y=-191, size=40))
+map_sprites.append(play.new_image(image="new_images/map11.jpg", x= 0, y=-232, size=40))
+map_sprites.append(play.new_image(image="new_images/map25.jpg", x=-140, y=-250, size=40))
+map_sprites.append(play.new_image(image="new_images/map26.jpg", x=-120, y=-210, size=40))
+map_sprites.append(play.new_image(image="new_images/map27.jpg", x= 140, y=-250, size=40))
+map_sprites.append(play.new_image(image="new_images/map26.jpg", x= 120, y=-210, size=40))
+map_sprites.append(play.new_image(image="new_images/map29.jpg", x=-180, y=-160, size=40))
+map_sprites.append(play.new_image(image="new_images/map28.jpg", x=-210, y=-131, size=40))
+map_sprites.append(play.new_image(image="new_images/map31.jpg", x= 206, y=-130, size=40))
+map_sprites.append(play.new_image(image="new_images/map30.jpg", x= 180, y=-160, size=40))
+map_sprites.append(play.new_image(image="new_images/map33.jpg", x= 90, y=-131, size=40))
+map_sprites.append(play.new_image(image="new_images/map33.jpg", x=-90, y=-131, size=40))
 
 game_map = Game_map("images/map/Map.png", map_sprites, dots, fruit)
 
@@ -82,7 +84,7 @@ ghost_sprites = [
     play.new_box(color="orange", width=7, height=7, x=252, y=273, transparency=1)
 ]
 
-pacman = Pacman("images/pacman.png", [-257 + 0 * 28.542, -257 + 0 * 28.542], game_map, 5)
+pacman = Pacman("images/pacman.png", [-257 + 1 * 28.542, -257 + 0 * 28.542], game_map, 5)
 ghosts = [
     Ghost("images/ghosts/Blinky.png", [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542], game_map, 30),
     Ghost("images/ghosts/Pinky.png", [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542], game_map, 30),
@@ -99,7 +101,7 @@ game_continues = True
 @play.when_key_pressed('up', 'w')
 async def move_up(key):
     global game_continues
-    if (game_continues):
+    if game_continues:
         pacman.move_up()
         pacman.is_touching_dots()
         await play.timer(seconds=0.001)
@@ -108,7 +110,7 @@ async def move_up(key):
 @play.when_key_pressed('down', 's')
 async def move_down(key):
     global game_continues
-    if (game_continues):
+    if game_continues:
         pacman.move_down()
         pacman.is_touching_dots()
         await play.timer(seconds=0.001)
@@ -117,7 +119,7 @@ async def move_down(key):
 @play.when_key_pressed('right', 'd')
 async def move_right(key):
     global game_continues
-    if (game_continues):
+    if game_continues:
         pacman.move_right()
         pacman.is_touching_dots()
         await play.timer(seconds=0.001)
@@ -126,7 +128,7 @@ async def move_right(key):
 @play.when_key_pressed('left', 'a')
 async def move_left(key):
     global game_continues
-    if (game_continues):
+    if game_continues:
         pacman.move_left()
         pacman.is_touching_dots()
         await play.timer(seconds=0.001)
@@ -136,79 +138,61 @@ async def move_left(key):
 @play.repeat_forever
 async def move_blinky():
     global game_continues
-    if (game_continues):
-        try:
-            if ghosts[0].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
-                ghosts[0].move(None, True)
-            ghosts[0].move(targets[0])
-            await play.timer(seconds=0.001)
-            if ghosts[0].image.is_touching(pacman.image):
-                game_continues = False
-                game_map.game_over(pacman, ghosts)
-        except ValueError:
-            time.sleep(10)
-        except IndexError:
-            time.sleep(10)
+    if ghosts[0].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
+        ghosts[0].move(None, True)
+    ghosts[0].move(targets[0])
+    await play.timer(seconds=0.001)
+    while not game_continues:
+        pass
+    if ghosts[0].image.is_touching(pacman.image):
+        game_continues = False
+        game_map.game_over(pacman, ghosts)
 
 
 @play.repeat_forever
 async def move_pinky():
     global game_continues
-    if (game_continues):
-        try:
-            if ghosts[1].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
-                ghosts[1].move(None, True)
-            ghosts[1].move(targets[1])
-            await play.timer(seconds=0.001)
-            if ghosts[1].image.is_touching(pacman.image):
-                game_continues = False
-                game_map.game_over(pacman, ghosts)
-        except ValueError:
-            time.sleep(10)
-        except IndexError:
-            time.sleep(10)
-
+    if ghosts[1].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
+        ghosts[1].move(None, True)
+    ghosts[1].move(targets[1])
+    await play.timer(seconds=0.001)
+    while not game_continues:
+        pass
+    if ghosts[1].image.is_touching(pacman.image):
+        game_continues = False
+        game_map.game_over(pacman, ghosts)
 
 @play.repeat_forever
 async def move_inky():
     global game_continues
-    if (game_continues):
-        try:
-            if ghosts[2].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
-                ghosts[2].move(None, True)
-            ghosts[2].move(targets[2])
-            await play.timer(seconds=0.001)
-            if ghosts[2].image.is_touching(pacman.image):
-                game_continues = False
-                game_map.game_over(pacman, ghosts)
-        except ValueError:
-            time.sleep(10)
-        except IndexError:
-            time.sleep(10)
-
+    if ghosts[2].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
+        ghosts[2].move(None, True)
+    ghosts[2].move(targets[2])
+    await play.timer(seconds=0.001)
+    while not game_continues:
+        pass
+    if ghosts[2].image.is_touching(pacman.image):
+        game_continues = False
+        game_map.game_over(pacman, ghosts)
 
 @play.repeat_forever
 async def move_clyde():
     global game_continues
-    if (game_continues):
-        try:
-            if ghosts[3].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
-                ghosts[3].move(None, True)
-            ghosts[3].move(targets[3])
-            await play.timer(seconds=0.001)
-            if ghosts[3].image.is_touching(pacman.image):
-                game_continues = False
-                game_map.game_over(pacman, ghosts)
-        except ValueError:
-            time.sleep(10)
-        except IndexError:
-            time.sleep(10)
+    if ghosts[3].position == [-257 + 19/2 * 28.542, -257 + 19/2 * 28.542]:
+        ghosts[3].move(None, True)
+    ghosts[3].move(targets[3])
+    await play.timer(seconds=0.001)
+    while not game_continues:
+        pass
+    if ghosts[3].image.is_touching(pacman.image):
+        game_continues = False
+        game_map.game_over(pacman, ghosts)
 
 
 @play.when_program_starts
 async def change_goals():
     global game_continues
-    if (game_continues):
+    if game_continues:
         for tact in range (10):
             for i in range (len (ghosts)):
                 ghosts[i].move(None, True)

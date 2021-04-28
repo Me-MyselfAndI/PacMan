@@ -1,7 +1,10 @@
 import play
 
 dist_const = 4
-far_dist_const = 22
+far_dist_const = 15
+close_length_const = 0.7
+far_length_const = 1.3
+
 
 class Creature:
     def __init__(self, image_name, position, game_map, size):
@@ -10,21 +13,32 @@ class Creature:
         self.game_map = game_map
         self.image = play.new_image(image=image_name, x=position[0], y=position[1], size=size)
 
-        self.up = play.new_box(color="red", x=position[0], y=position[1] + self.image.height/2 + dist_const, width=self.image.width, height=1)
-        self.right = play.new_box(color="red", x=position[0] + self.image.width/2 + dist_const, y=position[1], width=1, height=self.image.height)
-        self.left = play.new_box(color="red", x=position[0] - self.image.width/2 - dist_const, y=position[1], width=1, height=self.image.height)
-        self.down = play.new_box(color="red", x=position[0], y=position[1] - self.image.height/2 - dist_const, width=self.image.width, height=1)
+        self.up = play.new_box(color="red", x=position[0], y=position[1] + self.image.height/2 + dist_const, width=self.image.width * close_length_const, height=1)
+        self.right = play.new_box(color="red", x=position[0] + self.image.width/2 + dist_const, y=position[1], width=1, height=self.image.height * close_length_const)
+        self.left = play.new_box(color="red", x=position[0] - self.image.width/2 - dist_const, y=position[1], width=1, height=self.image.height * close_length_const)
+        self.down = play.new_box(color="red", x=position[0], y=position[1] - self.image.height/2 - dist_const, width=self.image.width * close_length_const, height=1)
+
+        #self.up.hide()
+        #self.right.hide()
+        #self.left.hide()
+        #self.down.hide()
 
         self.far_up = play.new_box(color="green", x=position[0], y=position[1] + self.image.height / 2 + far_dist_const,
-                               width=self.image.width, height=1)
+                               width=self.image.width*far_length_const, height=1)
         self.far_right = play.new_box(color="green", x=position[0] + self.image.width / 2 + far_dist_const, y=position[1], width=1,
-                                  height=self.image.height)
+                                  height=self.image.height*far_length_const)
         self.far_left = play.new_box(color="green", x=position[0] - self.image.width / 2 - far_dist_const, y=position[1], width=1,
-                                 height=self.image.height)
+                                 height=self.image.height*far_length_const)
         self.far_down = play.new_box(color="green", x=position[0], y=position[1] - self.image.height / 2 - far_dist_const,
-                                 width=self.image.width, height=1)
+                                 width=self.image.width*far_length_const, height=1)
+
+        #self.far_up.hide()
+        #self.far_right.hide()
+        #self.far_left.hide()
+        #self.far_down.hide()
 
     def remove(self):
+        self.image.go_to(x=0, y=0)
         self.image.remove()
         self.right.remove()
         self.far_right.remove()
